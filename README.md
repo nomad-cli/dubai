@@ -26,6 +26,10 @@ File.open("Example.pkpass", 'w') do |f|
 end
 ```
 
+<p align="center" >
+  <img src="http://f.cl.ly/items/1U3o0K2A1L1i0R2r3d2Z/dubai-screentshot.png" alt="Dubai Screenshot" title="Dubai Screenshot">
+</p>
+
 ## Comand Line Interface
 
 Dubai also comes with the `pk` binary, which provides a convenient way to generate and preview passes
