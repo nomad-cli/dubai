@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'commander/import'
+require 'terminal-table'
+
+$:.push File.expand_path("../../lib", __FILE__)
+require 'dubai'
+
+HighLine.track_eof = false # Fix for built-in Ruby
+Signal.trap("INT") {} # Suppress backtrace when exiting command
+
+program :version, Dubai::VERSION
+program :description, 'A command-line interface for generating and previewing passbook passes'
+
+program :help, 'Author', 'Mattt Thompson <m@mattt.me>'
+program :help, 'Website', 'https://github.com/mattt'
+program :help_formatter, :compact
+
+default_command :help
+
+require 'dubai/commands'

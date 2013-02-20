@@ -1,0 +1,33 @@
+{
+    "formatVersion" : 1,
+    "passTypeIdentifier" : "pass.com.example.store-card",
+    "description" : "Example Store Card",
+    "teamIdentifier": "Example",
+    "organizationName": "Example",
+    "serialNumber" : "123456",
+    "foregroundColor": "#FFFFFF",
+    "backgroundColor": "#AFC1E3",
+    "generic" : {
+        "primaryFields" : [
+
+        ],
+        "secondaryFields" : [
+            
+        ],
+        "auxiliaryFields" : [
+            
+        ],
+        "barcode" : {
+            "message" : "ABCD 123 EFGH 456 IJKL 789 MNOP",
+            "format" : "PKBarcodeFormatPDF417",
+            "messageEncoding" : "iso-8859-1"
+        },
+        "backFields" : [
+            {
+                "key" : "terms",
+                "label" : "Terms and Conditions",
+                "value" : "Lorem ipsum dolar sit amet"
+            }
+        ]
+    }
+}
