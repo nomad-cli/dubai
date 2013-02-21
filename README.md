@@ -1,5 +1,3 @@
-![Passbook](http://cl.ly/JPjc/title_passbook.png)
-
 # Dubai
 **Generate and Preview Passbook Passes**
 
