@@ -9,6 +9,9 @@ Dubai makes it easy to generate `.pkpass` from a script or the command line, all
 
 Pairs nicely with [Rack::Passbook](https://github.com/mattt/rack-passbook).
 
+> Dubai is named for [Dubai, UAE](http://en.wikipedia.org/wiki/Dubai), a center of commerce and trade.  
+> It's part of a series of world-class command-line utilities for iOS development, which includes [Cupertino](https://github.com/mattt/cupertino) (Apple Dev Center management), [Shenzhen](https://github.com/mattt/shenzhen) (Building & Distribution), [Houston](https://github.com/mattt/houston) (Push Notifications), and [Venice](https://github.com/mattt/venice) (In-App Purchase Receipt Verification).
+
 ## Installation
 
     $ gem install dubai
