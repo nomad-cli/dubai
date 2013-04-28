@@ -22,8 +22,16 @@ command :build do |c|
 
     Dubai::Passbook.certificate, Dubai::Passbook.password = @certificate, @password
 
-    File.open(@filepath, 'w') do |f|
-      f.write Dubai::Passbook::Pass.new(@directory).pkpass.string
+    begin
+      File.open(@filepath, 'w') do |f|
+        f.write Dubai::Passbook::Pass.new(@directory).pkpass.string
+      end
+    rescue OpenSSL::PKCS12::PKCS12Error => error
+      say_error "Error: #{error.message}"
+      say_warning "You may be getting this error because the certificate password is either incorrect or missing"
+      abort
+    rescue => error
+      say_error "Error: #{error.message}" and abort
     end
   end
 end
