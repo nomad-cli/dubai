@@ -7,9 +7,9 @@ command :generate do |c|
 
   c.example 'description', 'pk generate mypass'
   c.option '-T', '--type [boardingPass|coupon|eventTicket|storeCard|generic]', 'Type of pass'
-  
+
   c.action do |args, options|
-    @directory = args.first 
+    @directory = args.first
     @directory ||= ask "Enter a passbook name: "
 
     say_error "Missing pass name" and abort if @directory.nil? or @directory.empty?
@@ -30,8 +30,8 @@ command :generate do |c|
   end
 end
 
-# alias_command :generate, :new
-# alias_command :generate, :g
+alias_command :new, :generate
+alias_command :g, :generate
 
 private
 

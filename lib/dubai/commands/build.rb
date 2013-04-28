@@ -36,8 +36,8 @@ command :build do |c|
   end
 end
 
-# alias_command :build, :archive
-# alias_command :build, :b
+alias_command :archive, :build
+alias_command :b, :build
 
 private
 
