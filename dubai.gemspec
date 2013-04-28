@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.summary     = "Passbook pass generation and preview"
   s.description = ""
 
-  s.add_dependency "json", "~> 1.7.3"
-  s.add_dependency "commander", "~> 4.1.2"
-  s.add_dependency "terminal-table", "~> 1.4.5"
-  s.add_dependency "sinatra"
+  s.add_dependency "json"
+  s.add_dependency "commander", "~> 4.1"
+  s.add_dependency "terminal-table", "~> 1.4"
+  s.add_dependency "sinatra", "~> 1.3"
   s.add_dependency "rubyzip"
 
   s.add_development_dependency "rspec"
