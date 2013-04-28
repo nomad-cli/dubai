@@ -6,11 +6,12 @@ Gem::Specification.new do |s|
   s.name        = "dubai"
   s.authors     = ["Mattt Thompson"]
   s.email       = "m@mattt.me"
+  s.license     = "MIT"
   s.homepage    = "http://github.com/mattt/dubai"
   s.version     = Dubai::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.summary     = "Passbook pass generation and preview"
-  s.description = ""
+  s.summary     = "Dubai"
+  s.description = "Passbook pass generation and preview."
 
   s.add_dependency "json"
   s.add_dependency "commander", "~> 4.1"
