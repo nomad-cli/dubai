@@ -7,5 +7,4 @@ task :build => "#{gemspec.full_name}.gem"
 
 file "#{gemspec.full_name}.gem" => gemspec.files + ["dubai.gemspec"] do
   system "gem build dubai.gemspec"
-  system "gem install dubai-#{Dubai::VERSION}.gem"
 end
