@@ -2,7 +2,7 @@ require 'digest/sha1'
 require 'openssl'
 require 'base64'
 require 'json'
-require 'zip/zip'
+require 'zip'
 
 module Dubai
   module Passbook
