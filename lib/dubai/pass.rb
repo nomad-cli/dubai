@@ -60,7 +60,7 @@ XnMuLyV1FQ==
       end
 
       def pkpass
-        Zip::ZipOutputStream.write_buffer do |zip|
+        Zip::OutputStream.write_buffer do |zip|
           zip.put_next_entry 'pass.json' and zip.write @pass
           zip.put_next_entry 'manifest.json' and zip.write manifest
           zip.put_next_entry 'signature' and zip.write signature(manifest)
