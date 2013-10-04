@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dubai (0.0.4)
+    dubai (0.0.5)
       commander (~> 4.1)
       json
       rubyzip
@@ -11,11 +11,11 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    commander (4.1.3)
+    commander (4.1.5)
       highline (~> 1.6.11)
     diff-lcs (1.2.4)
-    highline (1.6.18)
-    json (1.7.7)
+    highline (1.6.19)
+    json (1.8.0)
     multi_json (1.7.2)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -29,13 +29,13 @@ GEM
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.1)
-    rubyzip (0.9.9)
+    rubyzip (1.0.0)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    sinatra (1.4.2)
-      rack (~> 1.5, >= 1.5.2)
+    sinatra (1.4.3)
+      rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     terminal-table (1.4.5)
