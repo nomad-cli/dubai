@@ -18,7 +18,7 @@ Pairs nicely with [Rack::Passbook](https://github.com/mattt/rack-passbook).
 ```ruby
 require 'dubai'
 
-Dubai::Passbook.certificate, Dubai::Passbook.password = "/path/to/certificate.p12, "..."
+Dubai::Passbook.certificate, Dubai::Passbook.password = "/path/to/certificate.p12", "..."
 
 # Example.pass is a directory with files "pass.png", "icon.png" & "icon@2x.png"
 File.open("Example.pkpass", 'w') do |f|
