@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Mattt Thompson"]
   s.email       = "m@mattt.me"
   s.license     = "MIT"
-  s.homepage    = "http://github.com/mattt/dubai"
+  s.homepage    = "http://nomad-cli.com"
   s.version     = Dubai::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Dubai"
