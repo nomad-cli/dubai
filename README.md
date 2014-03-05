@@ -51,7 +51,7 @@ Build a `.pkpass` file (which can previewed with a drag-and-drop onto the iOS Si
 ...or serve them from a webserver (which can be previewed by visiting the address on a device or the simulator):
 
     $ pk serve Example.pass -c /path/to/certificate.p12
-    $ open http://localhost:4567
+    $ open http://localhost:4567/pass.pkpass
 
 ## Contact
 
