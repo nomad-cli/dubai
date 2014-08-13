@@ -1,4 +1,4 @@
-![Dubai](https://raw.github.com/mattt/nomad-cli.com/assets/dubai-banner.png)
+![Dubai](https://raw.github.com/nomad/nomad.github.io/assets/dubai-banner.png)
 
 [Passbook](http://www.apple.com/ios/whats-new/#passbook) is an iOS 6 feature that manages boarding passes, movie tickets, retail coupons, & loyalty cards. Using the [PassKit API](https://developer.apple.com/library/prerelease/ios/#documentation/UserExperience/Reference/PassKit_Framework/_index.html), developers can register web services to automatically update content on the pass, such as gate changes on a boarding pass, or adding credit to a loyalty card.
 
