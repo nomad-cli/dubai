@@ -19,6 +19,7 @@ command :serve do |c|
     Dubai::Passbook.certificate, Dubai::Passbook.password = @certificate, @password
     
     Dubai::Server.set :directory, @directory
+    Dubai::Server.set :bind, '0.0.0.0'
     Dubai::Server.run!
   end
 end
