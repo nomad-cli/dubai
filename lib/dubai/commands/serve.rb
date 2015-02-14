@@ -6,7 +6,8 @@ command :serve do |c|
   c.example 'description', 'pk archive mypass'
   c.option '-c', '--certificate /path/to/cert.pem', 'Pass certificate'
   c.option '-p', '--[no]-password', 'Prompt for certificate password'
-  
+  c.option '-H', '--host [HOST]', 'Host to bind to'
+
   c.action do |args, options|
     determine_directory! unless @directory = args.first
     validate_directory!
@@ -17,8 +18,11 @@ command :serve do |c|
     @password = ask("Enter certificate password:"){|q| q.echo = false} if options.password
 
     Dubai::Passbook.certificate, Dubai::Passbook.password = @certificate, @password
-    
+
     Dubai::Server.set :directory, @directory
+
+    Dubai::Server.set :bind, options.host if options.host
+
     Dubai::Server.run!
   end
 end
@@ -45,5 +49,5 @@ def validate_directory!
 end
 
 def validate_certificate!
-  say_error "Missing or invalid certificate file" and abort if @certificate.nil? or not File.exist?(@certificate) 
+  say_error "Missing or invalid certificate file" and abort if @certificate.nil? or not File.exist?(@certificate)
 end

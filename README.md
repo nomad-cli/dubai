@@ -49,6 +49,10 @@ Build a `.pkpass` file (which can previewed with a drag-and-drop onto the iOS Si
     $ pk serve Example.pass -c /path/to/certificate.p12
     $ open http://localhost:4567/pass.pkpass
 
+Specify a `-H` / `--host` option to bind the server to a particular host. Binding on `0.0.0.0` will listen for all incoming connections on the local network, such as an iPhone or iPad:
+
+    $ pk serve Example.pass -H 0.0.0.0
+
 ## Contact
 
 Mattt Thompson
