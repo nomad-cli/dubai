@@ -53,13 +53,9 @@ Specify a `-H` / `--host` option to bind the server to a particular host. Bindin
 
     $ pk serve Example.pass -H 0.0.0.0
 
-## Contact
+## Creator
 
-Mattt Thompson
-
-- http://github.com/mattt
-- http://twitter.com/mattt
-- m@mattt.me
+Mattt Thompson ([@mattt](https://twitter.com/mattt))
 
 ## License
 
