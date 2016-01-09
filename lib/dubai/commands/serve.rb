@@ -1,6 +1,6 @@
 command :serve do |c|
   c.syntax = 'pk serve [PASSNAME]'
-  c.summary = 'Creates a .pkpass archive'
+  c.summary = 'Serves a .pkpass archive from a webserver'
   c.description = ''
 
   c.example 'description', 'pk archive mypass'
