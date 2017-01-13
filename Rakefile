@@ -1,9 +1,6 @@
-require "bundler/setup"
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
 
-gemspec = eval(File.read("dubai.gemspec"))
+RSpec::Core::RakeTask.new(:spec)
 
-task :build => "#{gemspec.full_name}.gem"
-
-file "#{gemspec.full_name}.gem" => gemspec.files + ["dubai.gemspec"] do
-  system "gem build dubai.gemspec"
-end
+task default: :spec
