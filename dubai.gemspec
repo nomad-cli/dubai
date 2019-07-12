@@ -5,8 +5,8 @@ require "dubai/version"
 
 Gem::Specification.new do |s|
   s.name        = "dubai"
-  s.authors     = ["Mattt Thompson"]
-  s.email       = "m@mattt.me"
+  s.authors     = ["Mattt"]
+  s.email       = "mattt@me.com"
   s.license     = "MIT"
   s.homepage    = "http://nomad-cli.com"
   s.version     = Dubai::VERSION
