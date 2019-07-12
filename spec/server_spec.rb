@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'rack/test'
 require_relative '../lib/dubai/server'

@@ -1,33 +1,27 @@
 {
-    "formatVersion" : 1,
-    "passTypeIdentifier" : "pass.com.example.coupon",
-    "description" : "Example Coupon",
-    "teamIdentifier": "Example",
-    "organizationName": "Example",
-    "serialNumber" : "123456",
-    "foregroundColor": "#FFFFFF",
-    "backgroundColor": "#C799FF",
-    "generic" : {
-        "primaryFields" : [
-
-        ],
-        "secondaryFields" : [
-            
-        ],
-        "auxiliaryFields" : [
-            
-        ],
-        "barcode" : {
-            "message" : "ABCD 123 EFGH 456 IJKL 789 MNOP",
-            "format" : "PKBarcodeFormatPDF417",
-            "messageEncoding" : "iso-8859-1"
-        },
-        "backFields" : [
-            {
-                "key" : "terms",
-                "label" : "Terms and Conditions",
-                "value" : "Lorem ipsum dolar sit amet"
-            }
-        ]
-    }
+  "formatVersion": 1,
+  "passTypeIdentifier": "pass.com.example.coupon",
+  "description": "Example Coupon",
+  "teamIdentifier": "Example",
+  "organizationName": "Example",
+  "serialNumber": "123456",
+  "foregroundColor": "#FFFFFF",
+  "backgroundColor": "#C799FF",
+  "generic": {
+    "primaryFields": [],
+    "secondaryFields": [],
+    "auxiliaryFields": [],
+    "barcode": {
+      "message": "ABCD 123 EFGH 456 IJKL 789 MNOP",
+      "format": "PKBarcodeFormatPDF417",
+      "messageEncoding": "iso-8859-1"
+    },
+    "backFields": [
+      {
+        "key": "terms",
+        "label": "Terms and Conditions",
+        "value": "Lorem ipsum dolar sit amet"
+      }
+    ]
+  }
 }

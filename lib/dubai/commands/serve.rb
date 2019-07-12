@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 command :serve do |c|
   c.syntax = 'pk serve [PASSNAME]'
   c.summary = 'Serves a .pkpass archive from a webserver'
@@ -15,9 +17,10 @@ command :serve do |c|
     @certificate = options.certificate
     validate_certificate!
 
-    @password = ask("Enter certificate password:"){|q| q.echo = false} if options.password
+    @password = ask('Enter certificate password:') { |q| q.echo = false } if options.password
 
-    Dubai::Passbook.certificate, Dubai::Passbook.password = @certificate, @password
+    Dubai::Passbook.certificate = @certificate
+    Dubai::Passbook.password = @password
 
     Dubai::Server.set :directory, @directory
 
@@ -38,16 +41,16 @@ def determine_directory!
                  when 0 then nil
                  when 1 then File.dirname(files.first)
                  else
-                   @directory = choose "Select a directory:", *files.collect{|f| File.dirname(f)}
+                   @directory = choose 'Select a directory:', *files.collect { |f| File.dirname(f) }
                  end
 end
 
 def validate_directory!
-  say_error "Missing argument" and abort if @directory.nil?
-  say_error "Directory #{@directory} does not exist" and abort unless File.directory?(@directory)
-  say_error "Directory #{@directory} is not valid pass" and abort unless File.exist?(File.join(@directory, "pass.json"))
+  say_error('Missing argument') && abort if @directory.nil?
+  say_error("Directory #{@directory} does not exist") && abort unless File.directory?(@directory)
+  say_error("Directory #{@directory} is not valid pass") && abort unless File.exist?(File.join(@directory, 'pass.json'))
 end
 
 def validate_certificate!
-  say_error "Missing or invalid certificate file" and abort if @certificate.nil? or not File.exist?(@certificate)
+  say_error('Missing or invalid certificate file') && abort if @certificate.nil? || !File.exist?(@certificate)
 end

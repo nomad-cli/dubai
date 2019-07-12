@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'fileutils'
 
 command :generate do |c|
@@ -10,11 +12,11 @@ command :generate do |c|
 
   c.action do |args, options|
     @directory = args.first
-    @directory ||= ask "Enter a passbook name: "
+    @directory ||= ask 'Enter a passbook name: '
 
-    say_error "Missing pass name" and abort if @directory.nil? or @directory.empty?
-    say_error "Directory #{@directory} already exists" and abort if File.directory?(@directory)
-    say_error "File exists at #{@directory}" and abort if File.exist?(@directory)
+    say_error('Missing pass name') && abort if @directory.nil? || @directory.empty?
+    say_error("Directory #{@directory} already exists") && abort if File.directory?(@directory)
+    say_error("File exists at #{@directory}") && abort if File.exist?(@directory)
 
     @type = options.type
     determine_type! unless @type
@@ -36,9 +38,9 @@ alias_command :g, :generate
 private
 
 def determine_type!
-  @type ||= choose "Select a pass type", *Dubai::Passbook::Pass::TYPES
+  @type ||= choose 'Select a pass type', *Dubai::Passbook::Pass::TYPES
 end
 
 def validate_type!
-  say_error %{Invalid type: "#{@type}", expected one of: [#{Dubai::Passbook::Pass::TYPES.join(', ')}]} unless Dubai::Passbook::Pass::TYPES.include?(@type)
+  say_error %(Invalid type: "#{@type}", expected one of: [#{Dubai::Passbook::Pass::TYPES.join(', ')}]) unless Dubai::Passbook::Pass::TYPES.include?(@type)
 end
