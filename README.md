@@ -26,7 +26,7 @@ File.open("Example.pkpass", 'w') do |f|
 end
 ```
 
-## Comand Line Interface
+## Command Line Interface
 
 Dubai also comes with the `pk` binary, which provides a convenient way to generate and preview passes
 
